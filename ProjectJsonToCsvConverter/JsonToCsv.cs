@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using CsvHelper;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -98,6 +100,62 @@ namespace ProjectJsonToCsvConverter
             Task<HttpResponseMessage> response = client.GetAsync(url);
             return response;
 
+        }
+
+        internal static string GetCsv()
+        {
+            using StringWriter writer = new StringWriter();
+
+            CsvWriter csv = new CsvWriter(writer, System.Globalization.CultureInfo.InvariantCulture);
+            csv.WriteField("name/common");
+            csv.WriteField("name/official");
+            csv.WriteField("region");
+            csv.WriteField("subregion");
+            csv.WriteField("capital");
+
+            csv.NextRecord();
+
+            foreach (var country in countries)
+            {
+                {
+                    var countryCommonName = country.Name.Common == null
+                        ? string.Empty
+                        : country.Name.Common;
+                    csv.WriteField(countryCommonName);
+                }
+
+                {
+                    var countryOfficailName = country.Name.Official == null
+                        ? string.Empty
+                        : country.Name.Official;
+                    csv.WriteField(countryOfficailName);
+                }
+
+                {
+                    var region = country.Region == null
+                        ? string.Empty
+                        : country.Region;
+                    csv.WriteField(region);
+                }
+
+                {
+                    var subregion = country.Subregion == null
+                        ? string.Empty
+                        : country.Subregion;
+                    csv.WriteField(subregion);
+                }
+
+                {
+                    var capital = country.Capital == null
+                        ? string.Empty
+                        : string.Join(", ", country.Capital);
+                    csv.WriteField(capital);
+                }
+
+                csv.NextRecord();
+            }
+
+            return writer.ToString();
         }
     }
 }

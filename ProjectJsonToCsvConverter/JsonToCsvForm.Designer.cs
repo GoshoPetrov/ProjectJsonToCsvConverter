@@ -59,6 +59,7 @@
             textBoxCsv.ScrollBars = ScrollBars.Vertical;
             textBoxCsv.Size = new Size(510, 556);
             textBoxCsv.TabIndex = 5;
+            textBoxCsv.TextChanged += textBoxCsv_TextChanged;
             // 
             // textBoxUserInput
             // 
@@ -105,6 +106,7 @@
             btnConvert.Text = "Convert to CSV";
             btnConvert.UseVisualStyleBackColor = true;
             btnConvert.Visible = false;
+            btnConvert.Click += btnConvert_Click;
             // 
             // label2
             // 

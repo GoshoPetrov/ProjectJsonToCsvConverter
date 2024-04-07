@@ -43,5 +43,15 @@ namespace ProjectJsonToCsvConverter
             btnConvert.Focus();
             textBoxCsv.Clear();
         }
+
+        private void btnConvert_Click(object sender, EventArgs e)
+        {
+            textBoxCsv.Text = JsonToCsv.GetCsv();
+        }
+
+        private void textBoxCsv_TextChanged(object sender, EventArgs e)
+        {
+            textBoxUserInput.Focus();
+        }
     }
 }
