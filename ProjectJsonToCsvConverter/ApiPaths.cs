@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjectJsonToCsvConverter
 {
-    internal class JsonToCsvConverter
+    public enum ApiPaths
     {
+        Name,
+        Region,
+        Subregion,
+        Capital,
     }
 }
