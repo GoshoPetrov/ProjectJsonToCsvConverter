@@ -16,12 +16,14 @@ namespace ProjectJsonToCsvConverter
 
         private void btnRequest_Click(object sender, EventArgs e)
         {
+            var api = textBoxAPI.Text;
             var userIntput = $"{textBoxUserInput.Text}/";
 
             try
             {
+                JsonToCsv.CheckUserInput(api);
                 JsonToCsv.CheckUserInput(userIntput);
-                textBoxJson.Text = JsonToCsv.GetJson(userIntput);
+                textBoxJson.Text = JsonToCsv.GetJson(api, userIntput);
             }
             catch (Exception ex)
             {
@@ -52,6 +54,11 @@ namespace ProjectJsonToCsvConverter
         private void textBoxCsv_TextChanged(object sender, EventArgs e)
         {
             textBoxUserInput.Focus();
+        }
+
+        private void btnRequest_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

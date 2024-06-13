@@ -39,9 +39,9 @@ namespace ProjectJsonToCsvConverter
             return true;
         }
 
-        internal static string GetJson(string userIntput)
+        internal static string GetJson(string api, string userIntput)
         {
-            Task<HttpResponseMessage> response = GetResponse(userIntput);
+            Task<HttpResponseMessage> response = GetResponse(api, userIntput);
 
             HttpStatusCode statusCode = response.Result.StatusCode;
             if (statusCode == HttpStatusCode.NotFound)
@@ -92,9 +92,13 @@ namespace ProjectJsonToCsvConverter
             return response.Result.Content.ReadAsStringAsync().Result;
         }
 
-        private static Task<HttpResponseMessage> GetResponse(string userIntput)
+        private static Task<HttpResponseMessage> GetResponse(string api, string userIntput)
         {
-            string url = $"https://restcountries.com/v3.1/{userIntput}";
+            if (!api.EndsWith('/'))
+            {
+                api += '/';
+            }
+            string url = $"{api}{userIntput}";
 
             HttpClient client = new HttpClient();
             Task<HttpResponseMessage> response = client.GetAsync(url);

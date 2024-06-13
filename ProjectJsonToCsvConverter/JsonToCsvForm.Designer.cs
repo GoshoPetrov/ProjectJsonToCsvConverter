@@ -28,124 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBoxJson = new TextBox();
-            textBoxCsv = new TextBox();
-            textBoxUserInput = new TextBox();
-            labelEndpoints = new Label();
-            label1 = new Label();
-            btnRequest = new Button();
-            btnConvert = new Button();
-            label2 = new Label();
-            label3 = new Label();
-            SuspendLayout();
+            this.textBoxJson = new System.Windows.Forms.TextBox();
+            this.textBoxCsv = new System.Windows.Forms.TextBox();
+            this.textBoxUserInput = new System.Windows.Forms.TextBox();
+            this.labelEndpoints = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRequest = new System.Windows.Forms.Button();
+            this.btnConvert = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxAPI = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // textBoxJson
             // 
-            textBoxJson.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            textBoxJson.Location = new Point(12, 89);
-            textBoxJson.Multiline = true;
-            textBoxJson.Name = "textBoxJson";
-            textBoxJson.ScrollBars = ScrollBars.Vertical;
-            textBoxJson.Size = new Size(403, 556);
-            textBoxJson.TabIndex = 2;
-            textBoxJson.TextChanged += textBoxJson_TextChanged;
+            this.textBoxJson.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxJson.Location = new System.Drawing.Point(12, 89);
+            this.textBoxJson.Multiline = true;
+            this.textBoxJson.Name = "textBoxJson";
+            this.textBoxJson.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxJson.Size = new System.Drawing.Size(403, 556);
+            this.textBoxJson.TabIndex = 2;
+            this.textBoxJson.TextChanged += new System.EventHandler(this.textBoxJson_TextChanged);
             // 
             // textBoxCsv
             // 
-            textBoxCsv.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBoxCsv.Location = new Point(648, 89);
-            textBoxCsv.Multiline = true;
-            textBoxCsv.Name = "textBoxCsv";
-            textBoxCsv.ScrollBars = ScrollBars.Vertical;
-            textBoxCsv.Size = new Size(510, 556);
-            textBoxCsv.TabIndex = 5;
-            textBoxCsv.TextChanged += textBoxCsv_TextChanged;
+            this.textBoxCsv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxCsv.Location = new System.Drawing.Point(648, 89);
+            this.textBoxCsv.Multiline = true;
+            this.textBoxCsv.Name = "textBoxCsv";
+            this.textBoxCsv.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxCsv.Size = new System.Drawing.Size(510, 556);
+            this.textBoxCsv.TabIndex = 5;
             // 
             // textBoxUserInput
             // 
-            textBoxUserInput.Location = new Point(523, 23);
-            textBoxUserInput.Name = "textBoxUserInput";
-            textBoxUserInput.Size = new Size(354, 27);
-            textBoxUserInput.TabIndex = 1;
-            textBoxUserInput.Text = "name/peru";
+            this.textBoxUserInput.Location = new System.Drawing.Point(523, 23);
+            this.textBoxUserInput.Name = "textBoxUserInput";
+            this.textBoxUserInput.Size = new System.Drawing.Size(354, 27);
+            this.textBoxUserInput.TabIndex = 1;
+            this.textBoxUserInput.Text = "name/peru";
             // 
             // labelEndpoints
             // 
-            labelEndpoints.AutoSize = true;
-            labelEndpoints.Location = new Point(306, 26);
-            labelEndpoints.Name = "labelEndpoints";
-            labelEndpoints.Size = new Size(211, 20);
-            labelEndpoints.TabIndex = 4;
-            labelEndpoints.Text = "https://restcountries.com/v3.1/";
+            this.labelEndpoints.AutoSize = true;
+            this.labelEndpoints.Location = new System.Drawing.Point(306, 26);
+            this.labelEndpoints.Name = "labelEndpoints";
+            this.labelEndpoints.Size = new System.Drawing.Size(0, 20);
+            this.labelEndpoints.TabIndex = 4;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(441, 253);
-            label1.Name = "label1";
-            label1.Size = new Size(146, 180);
-            label1.TabIndex = 5;
-            label1.Text = "Endpoints:\r\n- name/(name)\r\n  name/peru\r\n- region/(region)\r\n  (region/europe)\r\n- subregion/(region)\r\n  (subregion/europe)\r\n- capital/(capital)\r\n  (capital/llima)\r\n";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(441, 253);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 180);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Endpoints:\r\n- name/(name)\r\n  name/peru\r\n- region/(region)\r\n  (region/europe)\r\n- s" +
+    "ubregion/(region)\r\n  (subregion/europe)\r\n- capital/(capital)\r\n  (capital/llima)\r" +
+    "\n";
             // 
             // btnRequest
             // 
-            btnRequest.Location = new Point(441, 89);
-            btnRequest.Name = "btnRequest";
-            btnRequest.Size = new Size(172, 51);
-            btnRequest.TabIndex = 3;
-            btnRequest.Text = "Request API";
-            btnRequest.UseVisualStyleBackColor = true;
-            btnRequest.Click += btnRequest_Click;
+            this.btnRequest.Location = new System.Drawing.Point(441, 89);
+            this.btnRequest.Name = "btnRequest";
+            this.btnRequest.Size = new System.Drawing.Size(172, 51);
+            this.btnRequest.TabIndex = 3;
+            this.btnRequest.Text = "Request API";
+            this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // btnConvert
             // 
-            btnConvert.Location = new Point(441, 172);
-            btnConvert.Name = "btnConvert";
-            btnConvert.Size = new Size(172, 46);
-            btnConvert.TabIndex = 4;
-            btnConvert.Text = "Convert to CSV";
-            btnConvert.UseVisualStyleBackColor = true;
-            btnConvert.Visible = false;
-            btnConvert.Click += btnConvert_Click;
+            this.btnConvert.Location = new System.Drawing.Point(441, 172);
+            this.btnConvert.Name = "btnConvert";
+            this.btnConvert.Size = new System.Drawing.Size(172, 46);
+            this.btnConvert.TabIndex = 4;
+            this.btnConvert.Text = "Convert to CSV";
+            this.btnConvert.UseVisualStyleBackColor = true;
+            this.btnConvert.Visible = false;
+            this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(184, 66);
-            label2.Name = "label2";
-            label2.Size = new Size(44, 20);
-            label2.TabIndex = 8;
-            label2.Text = "JSON";
-            label2.Click += label2_Click;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(184, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "JSON";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(884, 66);
-            label3.Name = "label3";
-            label3.Size = new Size(35, 20);
-            label3.TabIndex = 9;
-            label3.Text = "CSV";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(884, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "CSV";
+            // 
+            // textBoxAPI
+            // 
+            this.textBoxAPI.Location = new System.Drawing.Point(184, 23);
+            this.textBoxAPI.Name = "textBoxAPI";
+            this.textBoxAPI.Size = new System.Drawing.Size(333, 27);
+            this.textBoxAPI.TabIndex = 10;
+            this.textBoxAPI.Text = "https://restcountries.com/v3.1/";
+            this.textBoxAPI.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // JsonToCsvForm
             // 
-            AcceptButton = btnRequest;
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1170, 657);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(btnConvert);
-            Controls.Add(btnRequest);
-            Controls.Add(label1);
-            Controls.Add(labelEndpoints);
-            Controls.Add(textBoxUserInput);
-            Controls.Add(textBoxCsv);
-            Controls.Add(textBoxJson);
-            Name = "JsonToCsvForm";
-            Text = "JsonToCsv";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AcceptButton = this.btnRequest;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1170, 657);
+            this.Controls.Add(this.textBoxAPI);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnConvert);
+            this.Controls.Add(this.btnRequest);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelEndpoints);
+            this.Controls.Add(this.textBoxUserInput);
+            this.Controls.Add(this.textBoxCsv);
+            this.Controls.Add(this.textBoxJson);
+            this.Name = "JsonToCsvForm";
+            this.Text = "JsonToCsv";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -158,5 +172,6 @@
         private Button btnConvert;
         private Label label2;
         private Label label3;
+        private TextBox textBoxAPI;
     }
 }
